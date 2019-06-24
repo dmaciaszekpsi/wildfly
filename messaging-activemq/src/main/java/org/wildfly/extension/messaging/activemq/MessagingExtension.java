@@ -86,6 +86,12 @@ import org.wildfly.extension.messaging.activemq.jms.bridge.JMSBridgeDefinition;
 import static org.wildfly.extension.messaging.activemq.CommonAttributes.EXTERNAL_JMS_QUEUE;
 import static org.wildfly.extension.messaging.activemq.CommonAttributes.EXTERNAL_JMS_TOPIC;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+
 /**
  * Domain extension that integrates Apache ActiveMQ 6.
  *
