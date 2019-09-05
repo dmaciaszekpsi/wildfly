@@ -277,7 +277,7 @@
         <version.jsoup>1.14.2</version.jsoup>
         <version.net.jcip>1.0</version.net.jcip>
         <version.net.shibboleth.utilities.java-support>7.1.1</version.net.shibboleth.utilities.java-support>
-        <version.org.apache.activemq.artemis>2.9.0</version.org.apache.activemq.artemis>
+        <version.org.apache.activemq.artemis>2.10.1</version.org.apache.activemq.artemis>
         <version.org.apache.activemq.artemis.native>1.0.0</version.org.apache.activemq.artemis.native>
         <version.org.apache.avro>1.7.6</version.org.apache.avro>
         <version.org.apache.cxf>3.3.11</version.org.apache.cxf>
@@ -376,6 +376,7 @@
         <version.org.jboss.ws.jaxws-undertow-httpspi>1.0.1.Final</version.org.jboss.ws.jaxws-undertow-httpspi>
         <version.org.jboss.ws.spi>3.2.3.Final</version.org.jboss.ws.spi>
         <version.org.jboss.xnio.netty.netty-xnio-transport>0.1.9.Final</version.org.jboss.xnio.netty.netty-xnio-transport>
+        <version.org.jctools.jctools-core>2.1.2</version.org.jctools.jctools-core>
         <version.org.jgroups>4.0.15.Final</version.org.jgroups>
         <version.org.jgroups.azure>1.2.0.Final</version.org.jgroups.azure>
         <version.org.jgroups.kubernetes>1.0.6.Final</version.org.jgroups.kubernetes>
@@ -1985,6 +1986,10 @@
                     <exclusion>
                         <groupId>org.apache.commons</groupId>
                         <artifactId>commons-configuration2</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.jctools</groupId>
+                        <artifactId>jctools-core</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
@@ -6178,6 +6183,12 @@
                         <artifactId>netty-transport</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jctools</groupId>
+                <artifactId>jctools-core</artifactId>
+                <version>${version.org.jctools.jctools-core}</version>
             </dependency>
 
             <dependency>
