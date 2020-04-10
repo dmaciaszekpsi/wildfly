@@ -245,6 +245,6 @@
    ]]></notes>
         <packageUrl regex="true">^pkg:maven/org\.infinispan/infinispan\-core@.*$</packageUrl>
         <cve>CVE-2019-10158</cve>
+        <cve>CVE-2019-10174</cve>
     </suppress>
-
 </suppressions>
