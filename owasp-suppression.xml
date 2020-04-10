@@ -237,6 +237,14 @@
 	   ]]></notes>
 	   <packageUrl regex="true">^pkg:maven/org\.apache\.cxf/cxf\-core@.*$</packageUrl>
 	   <cve>CVE-2019-17573</cve>
-	</suppress>
+    </suppress>
+    <!--    Red Hat JBoss Enterprise Application Platform 6 and 7 are Not affected-->
+    <suppress>
+        <notes><![CDATA[
+   file name: infinispan-core-9.4.11.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.infinispan/infinispan\-core@.*$</packageUrl>
+        <cve>CVE-2019-10158</cve>
+    </suppress>
 
 </suppressions>
