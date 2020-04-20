@@ -247,6 +247,16 @@
         <cve>CVE-2019-10158</cve>
         <cve>CVE-2019-10174</cve>
     </suppress>
+    <!--    Red Hat JBoss Enterprise Application Platform 6 and 7 are Not affected-->
+    <suppress>
+        <notes><![CDATA[
+   file name: infinispan-commons-9.4.11.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.infinispan/infinispan\-commons@.*$</packageUrl>
+        <cve>CVE-2019-10158</cve>
+        <cve>CVE-2019-10174</cve>
+    </suppress>
+
     <!-- The snakeyaml's upstream is not considering this a security vulnerability.-->
     <suppress>
         <notes><![CDATA[
