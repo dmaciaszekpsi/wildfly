@@ -292,6 +292,14 @@
         <cve>CVE-2019-10158</cve>
         <cve>CVE-2019-10174</cve>
     </suppress>
+    <suppress>
+        <notes><![CDATA[
+   file name: infinispan-hibernate-cache-spi-9.4.11.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.infinispan/infinispan\-hibernate\-cache\-spi@.*$</packageUrl>
+        <cve>CVE-2019-10158</cve>
+        <cve>CVE-2019-10174</cve>
+    </suppress>
 
     <!-- The snakeyaml's upstream is not considering this a security vulnerability.-->
     <suppress>
