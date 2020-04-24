@@ -53,6 +53,7 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * Validates failover of a SFSB in different contexts
@@ -60,6 +61,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class StatefulTimeoutTestCase extends ClusterAbstractTestCase {
     private static final long WAIT_FOR_TIMEOUT = TimeoutUtil.adjust(5000);
     private static final String MODULE_NAME = "stateful-timeout";

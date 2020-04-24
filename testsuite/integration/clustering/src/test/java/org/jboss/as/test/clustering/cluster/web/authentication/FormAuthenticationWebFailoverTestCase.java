@@ -53,6 +53,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * Validates that a user remains authenticated following failover when using FORM authentication.
@@ -61,6 +62,7 @@ import org.junit.runner.RunWith;
 @RunWith(Arquillian.class)
 @RunAsClient
 @ServerSetup(WebSecurityDomainSetup.class)
+@Ignore("COM_WILDFLY-266")
 public class FormAuthenticationWebFailoverTestCase extends ClusterAbstractTestCase {
 
     @Deployment(name = DEPLOYMENT_1, managed = false)

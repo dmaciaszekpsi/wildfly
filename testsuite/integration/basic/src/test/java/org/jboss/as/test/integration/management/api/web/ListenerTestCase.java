@@ -29,6 +29,7 @@ import static org.jboss.as.test.integration.management.util.ModelUtil.createOpNo
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import org.junit.Ignore;
 
 import java.net.URL;
 import java.util.HashMap;
@@ -101,6 +102,7 @@ public class ListenerTestCase extends ContainerResourceMgmtTestBase {
     }
 
     @Test
+    @Ignore("COM_WILDFLY-266")
     public void testHttpConnector() throws Exception {
 
         addListener(Listener.HTTP);
@@ -113,6 +115,7 @@ public class ListenerTestCase extends ContainerResourceMgmtTestBase {
     }
 
     @Test
+    @Ignore("COM_WILDFLY-266")
     public void testHttpsConnector() throws Exception {
 
         addListener(Listener.HTTPS);

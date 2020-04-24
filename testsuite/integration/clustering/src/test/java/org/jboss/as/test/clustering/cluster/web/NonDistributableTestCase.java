@@ -49,6 +49,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * Validate that non-distributable web applications play nicely with a load balancer using sticky sessions.
@@ -57,6 +58,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class NonDistributableTestCase extends ClusterAbstractTestCase {
 
     @Deployment(name = DEPLOYMENT_1, managed = false)

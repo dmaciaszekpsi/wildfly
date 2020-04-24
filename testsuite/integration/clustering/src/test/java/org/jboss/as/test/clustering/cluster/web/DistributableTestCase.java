@@ -56,6 +56,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * Validate that <distributable/> works for a two-node cluster.
@@ -65,6 +66,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class DistributableTestCase extends ClusterAbstractTestCase {
 
     private static final int REQUEST_DURATION = 10000;

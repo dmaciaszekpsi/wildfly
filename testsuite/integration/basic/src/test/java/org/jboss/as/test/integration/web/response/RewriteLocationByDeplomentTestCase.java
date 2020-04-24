@@ -23,6 +23,7 @@ import org.jboss.shrinkwrap.api.asset.StringAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 /**
@@ -49,6 +50,7 @@ public class RewriteLocationByDeplomentTestCase extends ContainerResourceMgmtTes
     }
 
     @Test
+    @Ignore("COM_WILDFLY-266")
     public void testDeploymentOverLocation() throws IOException, MgmtOperationException {
         // check that "/test" path returns 404
         HttpResponse response = getResponse("/test");

@@ -38,12 +38,14 @@ import org.jboss.logging.Logger;
 import org.jboss.shrinkwrap.api.Archive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * @author <a href="mailto:dpospisi@redhat.com">Dominik Pospisil</a>
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class ClusteredSingleSignOnTestCase extends ClusterAbstractTestCase {
 
     private static Logger log = Logger.getLogger(ClusteredSingleSignOnTestCase.class);

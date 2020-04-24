@@ -53,6 +53,8 @@
         <surefire.excludeTests />
 
         <ts.restore.default.configuration.cli>${jbossas.ts.dir}/shared/restore-default-configuration.cli</ts.restore.default.configuration.cli>
+
+        <enforcer.skip>true</enforcer.skip>
     </properties>
 
     <!--

@@ -68,6 +68,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class StatefulFailoverTestCase extends ClusterAbstractTestCase {
 
     private static final String MODULE_NAME = "stateful-failover";

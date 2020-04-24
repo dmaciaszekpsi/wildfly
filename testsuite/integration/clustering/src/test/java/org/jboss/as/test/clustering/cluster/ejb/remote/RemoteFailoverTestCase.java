@@ -67,6 +67,7 @@ import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 /**
@@ -75,6 +76,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class RemoteFailoverTestCase extends ClusterAbstractTestCase {
     private static final Logger log = Logger.getLogger(RemoteFailoverTestCase.class);
     private static final String MODULE_NAME = "remote-failover-test";

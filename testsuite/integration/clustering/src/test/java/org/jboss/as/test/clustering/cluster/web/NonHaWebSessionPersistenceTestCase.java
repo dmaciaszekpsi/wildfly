@@ -47,6 +47,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * Validates that session passivation in non-HA environment works (on single node).
@@ -56,6 +57,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class NonHaWebSessionPersistenceTestCase extends ClusterAbstractTestCase {
 
     @Deployment(name = DEPLOYMENT_1, managed = false, testable = false)

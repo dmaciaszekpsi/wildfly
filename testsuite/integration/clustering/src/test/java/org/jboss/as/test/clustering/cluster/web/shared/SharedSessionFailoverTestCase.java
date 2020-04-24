@@ -50,6 +50,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * Validates that web applications within an ear can share sessions if configured appropriately.
@@ -57,6 +58,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class SharedSessionFailoverTestCase extends ClusterAbstractTestCase {
 
     private static final String MODULE = "shared";

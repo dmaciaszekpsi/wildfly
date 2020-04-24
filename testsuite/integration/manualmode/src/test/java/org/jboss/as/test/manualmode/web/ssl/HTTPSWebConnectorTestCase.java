@@ -84,6 +84,7 @@ import org.junit.Assume;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * Testing https connection to Web Connector with configured two-way SSL.
@@ -316,6 +317,7 @@ public class HTTPSWebConnectorTestCase {
 
     @Test
     @InSequence(3)
+    @Ignore("COM_WILDFLY-266")
     public void stopContainer() throws Exception {
         deployer.undeploy(APP_CONTEXT);
         final ModelControllerClient client = TestSuiteEnvironment.getModelControllerClient();

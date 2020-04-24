@@ -23,9 +23,11 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class ServiceProviderRegistrationTestCase extends ClusterAbstractTestCase {
     private static final Logger log = Logger.getLogger(ServiceProviderRegistrationTestCase.class);
     private static final String MODULE_NAME = "service-provider-registration";

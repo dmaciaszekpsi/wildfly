@@ -56,6 +56,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * @author Paul Ferraro
@@ -64,6 +65,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class StatefulWithXPCFailoverTestCase extends ClusterAbstractTestCase {
 
     private static final String persistence_xml =

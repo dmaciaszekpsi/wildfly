@@ -29,10 +29,12 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.EnterpriseArchive;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Ignore;
 
 /**
  * @author Paul Ferraro
  */
+@Ignore("COM_WILDFLY-266")
 public class SingletonDeploymentDescriptorTestCase extends SingletonDeploymentTestCase {
 
     private static final String DEPLOYMENT_NAME = "singleton-deployment-descriptor";

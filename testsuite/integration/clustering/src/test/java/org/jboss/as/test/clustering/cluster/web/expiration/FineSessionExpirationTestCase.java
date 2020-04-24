@@ -28,9 +28,11 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class FineSessionExpirationTestCase extends SessionExpirationTestCase {
 
     @Deployment(name = DEPLOYMENT_1, managed = false, testable = false)

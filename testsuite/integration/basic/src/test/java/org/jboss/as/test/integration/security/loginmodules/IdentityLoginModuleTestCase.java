@@ -23,6 +23,7 @@
 package org.jboss.as.test.integration.security.loginmodules;
 
 import static org.junit.Assert.assertEquals;
+import org.junit.Ignore;
 
 import java.io.IOException;
 import java.net.URL;
@@ -157,6 +158,7 @@ public class IdentityLoginModuleTestCase {
      */
     @OperateOnDeployment(DEP1)
     @Test
+    @Ignore("COM_WILDFLY-266")
     public void testDefaultPrincipal(@ArquillianResource URL url) {
         assertPrincipal(url, "guest");
     }
@@ -166,6 +168,7 @@ public class IdentityLoginModuleTestCase {
      */
     @OperateOnDeployment(DEP2)
     @Test
+    @Ignore("COM_WILDFLY-266")
     public void testCustomPrincipal(@ArquillianResource URL url) {
         assertPrincipal(url, "SomeName");
     }

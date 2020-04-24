@@ -30,11 +30,13 @@ import org.jboss.as.test.clustering.single.web.SimpleServlet;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Ignore;
 
 /**
  * @author Radoslav Husar
  * @version April 2012
  */
+@Ignore("COM_WILDFLY-266")
 public class FineWebFailoverTestCase extends AbstractWebFailoverTestCase {
     private static final String DEPLOYMENT_NAME = "fine-distributable.war";
 

@@ -35,6 +35,7 @@ import org.jboss.as.test.clustering.cluster.ClusterAbstractTestCase;
 import org.jboss.as.test.clustering.cluster.ejb.stateful.bean.Incrementor;
 import org.jboss.as.test.http.util.TestHttpClientUtils;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 import org.jboss.arquillian.container.test.api.RunAsClient;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
@@ -56,6 +57,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class CdiFailoverTestCase extends ClusterAbstractTestCase {
 
     private static final String MODULE_NAME = "cdi-failover";

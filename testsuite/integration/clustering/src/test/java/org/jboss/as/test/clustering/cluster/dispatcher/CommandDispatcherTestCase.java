@@ -22,9 +22,11 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class CommandDispatcherTestCase extends ClusterAbstractTestCase {
     private static final long VIEW_CHANGE_WAIT = TimeoutUtil.adjust(2000);
     private static final Logger log = Logger.getLogger(CommandDispatcherTestCase.class);

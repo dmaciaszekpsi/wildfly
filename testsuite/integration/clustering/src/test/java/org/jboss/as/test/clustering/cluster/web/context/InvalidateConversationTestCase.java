@@ -51,6 +51,7 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * Test case for WFLY-4067
@@ -58,6 +59,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class InvalidateConversationTestCase extends ClusterAbstractTestCase {
 
     private static final String DEPLOYMENT_NAME = "conversation.war";

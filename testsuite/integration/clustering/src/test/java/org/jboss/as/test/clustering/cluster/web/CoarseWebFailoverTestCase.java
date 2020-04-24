@@ -30,7 +30,9 @@ import org.jboss.as.test.clustering.single.web.SimpleServlet;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Ignore;
 
+@Ignore("COM_WILDFLY-266")
 public class CoarseWebFailoverTestCase extends AbstractWebFailoverTestCase {
     private static final String DEPLOYMENT_NAME = "coarse-distributable.war";
 

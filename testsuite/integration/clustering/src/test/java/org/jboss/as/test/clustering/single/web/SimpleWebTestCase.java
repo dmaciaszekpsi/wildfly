@@ -45,6 +45,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.Ignore;
 
 /**
  * Validate the <distributable/> works for single node.
@@ -53,6 +54,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
+@Ignore("COM_WILDFLY-266")
 public class SimpleWebTestCase {
 
     private static final Logger log = Logger.getLogger(SimpleWebTestCase.class);

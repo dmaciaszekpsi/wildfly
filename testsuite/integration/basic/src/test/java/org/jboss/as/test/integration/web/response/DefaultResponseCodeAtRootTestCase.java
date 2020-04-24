@@ -47,6 +47,7 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 /**
@@ -99,6 +100,7 @@ public class DefaultResponseCodeAtRootTestCase extends ContainerResourceMgmtTest
     }
 
     @Test
+    @Ignore("COM_WILDFLY-266")
     public void testDefaultResponseCode() throws Exception {
         CompositeOperationBuilder cob = CompositeOperationBuilder.create();
 
