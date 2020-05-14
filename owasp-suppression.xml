@@ -301,4 +301,15 @@
         <packageUrl regex="true">^pkg:maven/io\.netty/netty\-all@.*$</packageUrl>
         <vulnerabilityName>CVE-2019-10797</vulnerabilityName>
     </suppress>
+
+    <!--    vulnerability concerns jackson-databind. It is false positive. -->
+    <suppress>
+        <notes><![CDATA[
+   file name: jackson-mapper-asl-1.9.13.redhat-00006.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.codehaus\.jackson/jackson\-mapper\-asl@.*$</packageUrl>
+        <vulnerabilityName>CVE-2019-14893</vulnerabilityName>
+        <vulnerabilityName>CVE-2020-10672</vulnerabilityName>
+        <vulnerabilityName>CVE-2020-10673</vulnerabilityName>
+    </suppress>
 </suppressions>
