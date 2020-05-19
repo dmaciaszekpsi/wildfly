@@ -361,5 +361,13 @@
         <packageUrl regex="true">^pkg:maven/org\.codehaus\.jackson/jackson\-mapper\-asl@.*$</packageUrl>
         <vulnerabilityName>CVE-2020-10673</vulnerabilityName>
     </suppress>
+<!--    False positive. Vulnerability concerns Kubernetes, not jgroups-kubernetes.-->
+    <suppress>
+        <notes><![CDATA[
+   file name: jgroups-kubernetes-1.0.6.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.jgroups\.kubernetes/jgroups\-kubernetes@.*$</packageUrl>
+        <cve>CVE-2019-11249</cve>
+    </suppress>
 
 </suppressions>
