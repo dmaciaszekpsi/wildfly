@@ -372,4 +372,12 @@
         <cve>CVE-2019-11254</cve>
         <cve>CVE-2020-8552</cve>
     </suppress>
+<!--    False-positive. It concerns Java-WebSocket, not org.jboss.spec.javax.websocket:jboss-websocket-api_1.1_spec-->
+    <suppress>
+        <notes><![CDATA[
+   file name: jboss-websocket-api_1.1_spec-1.1.3.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.jboss\.spec\.javax\.websocket/jboss\-websocket\-api_1\.1_spec@.*$</packageUrl>
+        <cve>CVE-2020-11050</cve>
+    </suppress>
 </suppressions>
