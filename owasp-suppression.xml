@@ -370,5 +370,6 @@
         <cve>CVE-2019-11249</cve>
         <cve>CVE-2019-11250</cve>
         <cve>CVE-2019-11254</cve>
+        <cve>CVE-2020-8552</cve>
     </suppress>
 </suppressions>
