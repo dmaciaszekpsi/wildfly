@@ -358,4 +358,18 @@
         <vulnerabilityName>CVE-2020-10672</vulnerabilityName>
         <vulnerabilityName>CVE-2020-10673</vulnerabilityName>
     </suppress>
+	
+    <!--    Fixed: https://github.com/PSI-Polska/undertow/commit/ac30d071f116c649061c71744f01d6511fed2e7b -->
+    <suppress>
+        <notes><![CDATA[file name: undertow-servlet-1.4.27-2-PSI.jar]]></notes>
+        <packageUrl regex="true">^pkg:maven/io\.undertow/undertow\-servlet@.*$</packageUrl>
+        <cve>CVE-2019-10212</cve>
+    </suppress>
+    <!--    Fixed: https://github.com/PSI-Polska/undertow/commit/ac30d071f116c649061c71744f01d6511fed2e7b -->
+    <suppress>
+        <notes><![CDATA[file name: undertow-core-1.4.27-2-PSI.jar]]></notes>
+        <packageUrl regex="true">^pkg:maven/io\.undertow/undertow\-core@.*$</packageUrl>
+        <cve>CVE-2019-10212</cve>
+    </suppress>	
+	
 </suppressions>
