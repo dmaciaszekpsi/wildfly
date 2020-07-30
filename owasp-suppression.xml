@@ -169,6 +169,11 @@
         <gav regex="true">^org\.apache\.directory\.api:.*:.*$</gav>
         <cve>CVE-2018-1337</cve>
     </suppress>
+    <!-- The vulnerable dependency is Apache Directory LDAP API before 1.0.0-M31. It's not exploitable, because it's a dependency from WildFly test suite. -->
+    <suppress>
+        <gav regex="true">^org\.apache\.directory\.api:.*:.*$</gav>
+        <cve>CVE-2015-3250</cve>
+    </suppress>
     <!-- Vulnerabilities do not apply to jackson-mapper-asl 1.x while using jackson-databind 2.x -->
     <suppress>
         <notes><![CDATA[
@@ -187,14 +192,13 @@
         <vulnerabilityName>CVE-2019-16335</vulnerabilityName>
         <vulnerabilityName>CVE-2019-17267</vulnerabilityName>
     </suppress>
-    <!-- According to https://bugzilla.redhat.com/show_bug.cgi?id=1400644 CVE-2016-9606 was fixed in resteasy 3.0.22 -->
+    
+	<!-- According to https://bugzilla.redhat.com/show_bug.cgi?id=1400644 CVE-2016-9606 was fixed in resteasy 3.0.22 -->
     <suppress>
-        <notes><![CDATA[
-        file name: resteasy-jaxrs-3.0.25-1-PSI.jar
-        ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.jboss\.resteasy/resteasy\-jaxrs@.*$</packageUrl>
-        <vulnerabilityName>CVE-2016-9606</vulnerabilityName>
+        <gav regex="true">^org\.jboss\.resteasy:.*:.*$</gav>
+        <cve>CVE-2016-9606</cve>
     </suppress>
+
     <!-- WildFly implement JAX-RS using Resteasy, not CXF. Therefore it's not affected. -->
     <suppress>
         <notes><![CDATA[
@@ -210,7 +214,15 @@
         ]]></notes>
         <packageUrl regex="true">^pkg:maven/dom4j/dom4j@.*$</packageUrl>
         <cve>CVE-2018-1000632</cve>
-     </suppress>
+    </suppress>
+    <!-- Fixed in commit: https://github.com/PSI-Polska/wildfly/commit/c049b66b64f8ff37eba20208946712df4807050f, see: COM_WILDFLY-269-->
+    <suppress>
+        <notes><![CDATA[
+        file name: dom4j-1.6.1.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/dom4j/dom4j@.*$</packageUrl>
+        <cve>CVE-2020-10683</cve>
+    </suppress>
      <!--  This issue was fixed in this commit https://github.com/picketlink/picketlink/commit/8c78668e4f08cf3c4ed14d8a36d402dcf02cb057#diff-424514e417d84d8d07c9ff3197048739, and PicketLink 2.5.5.SP12-redhat-00005 has this patch. -->
      <suppress>
         <notes><![CDATA[
@@ -402,6 +414,21 @@
         <notes><![CDATA[file name: undertow-core-1.4.27-2-PSI.jar]]></notes>
         <packageUrl regex="true">^pkg:maven/io\.undertow/undertow\-core@.*$</packageUrl>
         <cve>CVE-2019-10212</cve>
+    </suppress>	
+	
+    <!-- Vulnerabilities concern apache:cxf before current version 3.1.17 (updated by commit: 03e7ffa) but not xjcplugins. It is a false positive. -->
+    <suppress>
+        <gav regex="true">^org\.apache\.cxf\.xjcplugins:.*:.*$</gav>
+        <cve>CVE-2017-3156</cve>
+		<cve>CVE-2017-5656</cve>
+		<cve>CVE-2018-8039</cve>
+    </suppress>	
+	
+    <!-- This vulnerability is not applicable if JGroups is only used for discovery and no actual connections are made between nodes using JGroups, see: COM_WILDFLY-199 -->
+    <suppress>
+        <notes><![CDATA[file name: jgroups-3.6.10.Final.jar]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.jgroups/jgroups@.*$</packageUrl>
+        <vulnerabilityName>CWE-300: Channel Accessible by Non-Endpoint ('Man-in-the-Middle')</vulnerabilityName>
     </suppress>	
 	
 </suppressions>
