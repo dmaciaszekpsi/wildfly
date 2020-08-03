@@ -192,6 +192,16 @@
         <cve>CVE-2016-9606</cve>
     </suppress>
 
+	<!-- CVE-2020-1695 was fixed in resteasy 3.0.25-2-PSI https://github.com/PSI-Polska/Resteasy/commit/433a7b1721a61ef34990ea530792a53d9e96ff33 -->
+    <suppress>
+        <packageUrl regex="true">^pkg:maven/org\.jboss\.resteasy/jose\-.*@.*$</packageUrl>
+        <cve>CVE-2020-1695</cve>
+    </suppress>
+    <suppress>
+        <packageUrl regex="true">^pkg:maven/org\.jboss\.resteasy/resteasy\-.*@.*$</packageUrl>
+        <cve>CVE-2020-1695</cve>
+    </suppress>
+
     <!-- WildFly implement JAX-RS using Resteasy, not CXF. Therefore it's not affected. -->
     <suppress>
         <notes><![CDATA[
