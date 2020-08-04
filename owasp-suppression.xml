@@ -433,6 +433,12 @@
         <cve>CVE-2020-10705</cve>
     </suppress>	
 
+    <!-- Fixed in 1.4.27-3-PSI-SNAPSHOT (https://bugzilla.redhat.com/show_bug.cgi?id=1772464, COM_WILDFLY-281), commits: 39a4c19, 9e09dad -->
+    <suppress>
+        <packageUrl regex="true">^pkg:maven/io\.undertow/undertow\-.*@.*$</packageUrl>
+        <cve>CVE-2019-14888</cve>
+    </suppress>	
+
     <!-- Vulnerability concerns Java-WebSocket, not org.jboss.spec.javax.websocket:jboss-websocket-api_1.1_spec - false positive -->
     <suppress>
         <notes><![CDATA[file name: jboss-websocket-api_1.1_spec-1.1.1.Final.jar]]></notes>
