@@ -19,6 +19,13 @@
                 <exclude>${server.output.dir.prefix}-${server.output.dir.version}/standalone/data/**</exclude>
                 <exclude>${server.output.dir.prefix}-${server.output.dir.version}/standalone/log/**</exclude>
                 <exclude>${server.output.dir.prefix}-${server.output.dir.version}/standalone/tmp/**</exclude>
+                <exclude>${server.output.dir.prefix}-${server.output.dir.version}/standalone/configuration/standalone_xml_history/**</exclude>
+                <exclude>${server.output.dir.prefix}-${server.output.dir.version}/domain/data/**</exclude>
+                <exclude>${server.output.dir.prefix}-${server.output.dir.version}/domain/log/**</exclude>
+                <exclude>${server.output.dir.prefix}-${server.output.dir.version}/domain/servers/**</exclude>
+                <exclude>${server.output.dir.prefix}-${server.output.dir.version}/domain/tmp/**</exclude>
+                <exclude>${server.output.dir.prefix}-${server.output.dir.version}/domain/configuration/domain_xml_history/**</exclude>
+                <exclude>${server.output.dir.prefix}-${server.output.dir.version}/domain/configuration/host_xml_history/**</exclude>
             </excludes>
         </fileSet>
     </fileSets>

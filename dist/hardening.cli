@@ -1,9 +1,14 @@
+embed-server --server-config=${config}
+
 # [P] Remove Example Content
 /subsystem=datasources/data-source=ExampleDS:remove
 /subsystem=ee/service=default-bindings:undefine-attribute(name=datasource)
 
-/subsystem=undertow/server=default-server/host=default-host/location="/":remove
-/subsystem=undertow/configuration=handler/file=welcome-content:remove
+# microprofile has not welcome content
+if (outcome == success) of /subsystem=undertow/configuration=handler/file=welcome-content:read-resource
+  /subsystem=undertow/server=default-server/host=default-host/location="/":remove
+  /subsystem=undertow/configuration=handler/file=welcome-content:remove
+end-if
 
 # [P] Disable Deployment Scanner
 /subsystem=deployment-scanner/scanner=default:write-attribute(name="scan-enabled",value=false)
@@ -15,14 +20,21 @@
 # remove default https listener
 /subsystem=undertow/server=default-server/https-listener=https:remove
 
-# create WCC_SSL_Realm
-/core-service=management/security-realm=WCC_SSL_Realm:add
-/core-service=management/security-realm=WCC_SSL_Realm/server-identity=ssl:add(\
-    keystore-path="wcc.keystore",\
-    keystore-relative-to="jboss.server.config.dir",\
-    keystore-password="wildfly")
+# create WccSslContext
+/subsystem=elytron/key-store=WccKeyStore:add(\
+    path=wcc.keystore,\
+    relative-to=jboss.server.config.dir,\
+    credential-reference={clear-text="wildfly"},\
+    type=JKS)
+/subsystem=elytron/key-manager=WccKeyManager:add(\
+    key-store=WccKeyStore,\
+    alias-filter=wcc,\
+    credential-reference={clear-text="wildfly"})
+/subsystem=elytron/server-ssl-context=WccSslContext:add(key-manager=WccKeyManager)
 
 # create https listener
 /subsystem=undertow/server=default-server/https-listener=httpsListener:add(\
-    socket-binding="https",\
-    security-realm="WCC_SSL_Realm")
+    socket-binding=https,\
+    ssl-context=WccSslContext)
+
+stop-embedded-server
