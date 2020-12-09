@@ -14,6 +14,9 @@
             <includes>
                 <include>${server.output.dir.prefix}-${version}/**</include>
             </includes>
+            <excludes>
+                <exclude>${server.output.dir.prefix}-${version}/modules/system/layers/base/org/jboss/as/jacorb/**</exclude>
+            </excludes>
         </fileSet>
     </fileSets>
 </assembly>
