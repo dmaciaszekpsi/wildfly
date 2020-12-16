@@ -30,6 +30,7 @@ import static org.jboss.logging.Logger.Level.WARN;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InvalidClassException;
 import java.lang.reflect.Method;
 import java.rmi.RemoteException;
 import java.sql.SQLException;
@@ -3184,4 +3185,9 @@ public interface EjbLogger extends BasicLogger {
     @Message(id = 509, value = "Clustered EJBs in Node: %s are bound to INADDR_ANY(%s). Client cannot reach back the cluster when they are not in the same local network.")
     void clusteredEJBsBoundToINADDRANY(String nodeName, String ip);
 
+    @Message(id = 518, value = "Exception resolving class %s for unmarshalling; it has either been blacklisted or not whitelisted")
+    InvalidClassException cannotResolveFilteredClass(String clazz);
+
+    @Message(id = 519, value = "Invalid unmarshalling filter specfication %s; specifications must describe class or package name matching patterns")
+    IllegalArgumentException invalidFilterSpec(String spec);
 }
