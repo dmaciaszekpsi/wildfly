@@ -381,14 +381,6 @@
         <cve>CVE-2019-10174</cve>
     </suppress>
 
-    <!-- The snakeyaml's upstream is not considering this a security vulnerability.-->
-    <suppress>
-        <notes><![CDATA[
-   file name: snakeyaml-1.18.jar
-   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.yaml/snakeyaml@.*$</packageUrl>
-        <cve>CVE-2017-18640</cve>
-    </suppress>
     <!-- WSO2 is not part of WildFly-->
     <suppress>
         <notes><![CDATA[
