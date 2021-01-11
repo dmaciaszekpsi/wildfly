@@ -30,7 +30,6 @@
 
     <resources>
         <artifact name="${org.apache.cxf:cxf-rt-bindings-coloc}"/>
-        <artifact name="${org.apache.cxf:cxf-rt-bindings-object}"/>
         <artifact name="${org.apache.cxf:cxf-rt-bindings-soap}"/>
         <artifact name="${org.apache.cxf:cxf-rt-bindings-xml}"/>
         <artifact name="${org.apache.cxf:cxf-rt-databinding-aegis}"/>

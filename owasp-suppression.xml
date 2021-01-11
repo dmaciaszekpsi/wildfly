@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    <!-- Vulnerability apply to cxf not to cxf-xjc -->
+    <suppress>
+        <notes><![CDATA[
+   file name: cxf-xjc-dv-3.0.5.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.cxf\.xjcplugins/cxf\-xjc\-.*$</packageUrl>
+        <cve>CVE-2019-12423</cve>
+    </suppress>
+
     <!-- WontFix: http://jira-bld-com.psi.de:8080/browse/COM_WILDFLY-295 -->
     <suppress>
         <notes><![CDATA[
