@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+
+    <!-- Vulnerability apply to jackson-databind not to jackson-mapper -->
+    <suppress>
+        <notes><![CDATA[
+   file name: jackson-mapper-asl-1.9.14.jdk17-redhat-00001.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.codehaus\.jackson/jackson\-mapper\-.*$</packageUrl>
+        <vulnerabilityName>CVE-2020-25649</vulnerabilityName>
+    </suppress>
+
     <!-- Vulnerability apply to cxf not to cxf-xjc -->
     <suppress>
         <notes><![CDATA[
