@@ -28,7 +28,7 @@
     </properties>
 
     <resources>
-        <artifact name="${org.glassfish.jaxb:xsom}"/>
+        <artifact name="${com.sun.xsom:xsom}"/>
     </resources>
 
     <dependencies>

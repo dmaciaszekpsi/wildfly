@@ -325,7 +325,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.glassfish.jaxb</groupId>
+            <groupId>com.sun.xsom</groupId>
             <artifactId>xsom</artifactId>
         </dependency>
 
@@ -437,11 +437,6 @@
             </exclusions>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-
         <!-- DO NOT MOVE the JBossWS dependencies here below; they need to come BEFORE the Apache CXF ones (see WFLY-5067) -->
         <dependency>
             <groupId>org.jboss.ws</groupId>
@@ -515,6 +510,11 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-bindings-coloc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-bindings-object</artifactId>
         </dependency>
 
         <dependency>
@@ -1211,7 +1211,7 @@
 
         <dependency>
             <groupId>org.jboss.spec.javax.xml.bind</groupId>
-            <artifactId>jboss-jaxb-api_2.3_spec</artifactId>
+            <artifactId>jboss-jaxb-api_2.2_spec</artifactId>
         </dependency>
 
         <dependency>
@@ -1820,7 +1820,7 @@
 
         <dependency>
             <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity-engine-core</artifactId>
+            <artifactId>velocity</artifactId>
         </dependency>
 
         <dependency>
