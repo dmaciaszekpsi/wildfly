@@ -32,6 +32,7 @@ import org.jboss.as.test.integration.common.HttpRequest;
 import org.jboss.as.test.integration.jaxrs.packaging.war.WebXml;
 import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
+import org.jboss.shrinkwrap.api.asset.StringAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
@@ -44,14 +45,14 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Arquillian.class)
 @RunAsClient
-@org.junit.Ignore("COM_WILDFLY-247")
 public class JaxrsYamlProviderTestCase {
 
-      @Deployment
+    @Deployment
     public static Archive<?> deploy() {
         WebArchive war = ShrinkWrap.create(WebArchive.class, "jaxrsnoap.war");
         war.addPackage(HttpRequest.class.getPackage());
         war.addPackage(JaxrsYamlProviderTestCase.class.getPackage());
+        war.addAsResource(new StringAsset("org.jboss.resteasy.plugins.providers.YamlProvider"), "META-INF/services/javax.ws.rs.ext.Providers");
         war.addAsWebInfResource(WebXml.get("<servlet-mapping>\n" +
                 "        <servlet-name>javax.ws.rs.core.Application</servlet-name>\n" +
                 "        <url-pattern>/myjaxrs/*</url-pattern>\n" +
