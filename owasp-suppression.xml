@@ -453,4 +453,14 @@
         <packageUrl regex="true">^pkg:maven/org\.jboss\.spec\.javax\.websocket/jboss\-websocket\-api_1\.1_spec@.*$</packageUrl>
         <cve>CVE-2020-11050</cve>
     </suppress>
+
+    <!-- False positive. Vulnerability is not applicable to WildFly's ActiveMQ. -->
+    <suppress>
+        <notes><![CDATA[
+   file name: artemis-jms-client-2.6.4.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.activemq/artemis\-jms\-client@.*$</packageUrl>
+        <vulnerabilityName>CVE-2021-26117</vulnerabilityName>
+    </suppress>
+
 </suppressions>
