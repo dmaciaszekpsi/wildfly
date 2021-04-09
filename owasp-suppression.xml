@@ -482,5 +482,15 @@
         <packageUrl regex="true">^pkg:maven/org\.apache\.activemq/artemis\-jms\-client@.*$</packageUrl>
         <vulnerabilityName>CVE-2021-26117</vulnerabilityName>
     </suppress>
-	
+
+    <!-- False positive. Vulnerability applies to jackson-databind not to jackson-xc. -->
+    <suppress>
+        <notes><![CDATA[
+   file name: jackson-xc-1.9.14.jdk17-redhat-00001.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.codehaus\.jackson/jackson\-xc@.*$</packageUrl>
+        <cve>CVE-2018-14718</cve>
+        <cve>CVE-2018-7489</cve>
+    </suppress>
+
 </suppressions>
