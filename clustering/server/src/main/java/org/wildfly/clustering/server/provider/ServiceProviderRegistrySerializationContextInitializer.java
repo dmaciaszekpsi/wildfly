@@ -26,7 +26,6 @@ import org.infinispan.protostream.SerializationContext;
 import org.infinispan.protostream.SerializationContextInitializer;
 import org.kohsuke.MetaInfServices;
 import org.wildfly.clustering.marshalling.protostream.AbstractSerializationContextInitializer;
-import org.wildfly.clustering.marshalling.protostream.ValueMarshaller;
 
 /**
  * @author Paul Ferraro
@@ -36,6 +35,5 @@ public class ServiceProviderRegistrySerializationContextInitializer extends Abst
 
     @Override
     public void registerMarshallers(SerializationContext context) {
-        context.registerMarshaller(new ValueMarshaller<>(new GetLocalServicesCommand<>()));
     }
 }

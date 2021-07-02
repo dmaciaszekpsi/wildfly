@@ -2,8 +2,3 @@ package org.wildfly.clustering.server.provider;
 
 // IDs: 140 -144
 
-/**
- * @TypeId(140)
- */
-message GetLocalServicesCommand {
-}
