@@ -33,7 +33,7 @@
     </dependencies>
 
     <resources>
-        <artifact name="${org.jdom:jdom}"/>
+        <artifact name="${org.jdom:jdom2}"/>
     </resources>
 
 </module>
