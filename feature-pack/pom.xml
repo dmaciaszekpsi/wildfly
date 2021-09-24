@@ -1471,11 +1471,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.jdom</groupId>
-            <artifactId>jdom2</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.jgroups</groupId>
             <artifactId>jgroups</artifactId>
         </dependency>
