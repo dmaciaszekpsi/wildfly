@@ -508,6 +508,9 @@
         <version.wsdl4j>1.6.3</version.wsdl4j>
         <version.xml-resolver>1.2</version.xml-resolver>
         <version.xom>1.3.7</version.xom>
+
+        <!-- Allow insecure repositories -->
+        <insecure.repositories>WARN</insecure.repositories>
     </properties>
 
     <dependencyManagement>
