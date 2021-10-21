@@ -7,7 +7,7 @@
    file name: activemq-artemis-native-1.0.2.jar
    file name: artemis-wildfly-jakarta-integration-1.0.5.jar (shaded: org.apache.activemq.tests:unit-tests:2.18.0)
    ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.apache\.activemq(/activemq\-artemis\-native|.tests/unit-tests)@.*$</packageUrl>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.activemq(/activemq\-artemis\-native|\.tests/.*)@.*$</packageUrl>
         <cve>CVE-2014-3576</cve>
         <cve>CVE-2016-3088</cve>
         <cve>CVE-2018-11775</cve>
@@ -27,8 +27,11 @@
     <suppress>
         <notes><![CDATA[
 	   file name: cxf-xjc-dv-3.3.1.jar
+	   file name: cxf-xjc-ts-3.3.1.jar
+	   file name: cxf-xjc-bug986-3.3.1.jar
+	   file name: cxf-xjc-boolean-3.3.1.jar
 	   ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.apache\.cxf\.xjcplugins/cxf\-xjc\-dv@.*$</packageUrl>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.cxf\.xjcplugins/cxf\-xjc\-(dv|ts|bug986|boolean)@.*$</packageUrl>
         <cve>CVE-2019-12406</cve>
         <cve>CVE-2019-12419</cve>
         <cve>CVE-2019-12423</cve>
@@ -50,6 +53,31 @@
         <cve>CVE-2020-1757</cve>
         <cve>CVE-2020-10705</cve>
         <cve>CVE-2020-10719</cve>
+    </suppress>
+
+    <!-- This is a false positive because wildfly-core itself does not use mockserver libraries. Mockserver is used only for test purposes (wildfly-core-testsuite-shared module). -->
+    <suppress>
+        <notes><![CDATA[
+   file name: mockserver-core-5.8.1.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.mock\-server/mockserver\-.*$</packageUrl>
+        <cve>CVE-2021-32827</cve>
+    </suppress>
+
+    <!-- wildfly 25.0.0 is shipped with netty 4.1.68.Final and the suppressed CVEs relate to the versions below 4.1.60. Furthermore, netty version 4.1.43 comes from mockserver dependency, which is a part of a testsuite.  -->
+    <suppress>
+        <notes><![CDATA[
+   file name: netty-buffer-4.1.43.Final.jar
+   file name: netty-codec-4.1.43.Final.jar
+   file name: netty-common-4.1.43.Final.jar
+   file name: netty-handler-4.1.43.Final.jar
+   file name: netty-transport-4.1.43.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/io\.netty/netty\-.*$</packageUrl>
+        <cve>CVE-2019-20444</cve>
+        <cve>CVE-2019-20445</cve>
+        <cve>CVE-2020-11612</cve>
+        <cve>CVE-2020-7238</cve>
     </suppress>
 
 </suppressions>
