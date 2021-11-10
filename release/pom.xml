@@ -34,7 +34,7 @@
         Maintain separation between the artifact id and the version to help prevent
         merge conflicts between commits changing the GA and those changing the V.
         -->
-        <version>25.0.0.Final</version>
+        <version>25.0.2.Final-SNAPSHOT</version>
     </parent>
 
     <artifactId>wildfly-release</artifactId>
@@ -48,12 +48,7 @@
             <type>pom</type>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>wildfly-preview-dist</artifactId>
-            <type>pom</type>
-            <scope>provided</scope>
-        </dependency>
+
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>wildfly-servlet-dist</artifactId>
@@ -71,6 +66,14 @@
                     <value>true</value>
                 </property>
             </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>${project.groupId}</groupId>
+                    <artifactId>wildfly-preview-dist</artifactId>
+                    <type>pom</type>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
             <build>
                 <plugins>
                     <plugin>
