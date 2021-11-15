@@ -136,6 +136,37 @@
         <cve>CVE-2020-10719</cve>
     </suppress>
 
+    <!-- [wildfly] This is a false positive because wildfly itself does not use commons-compress. Commons-compress comes with org.testcontainers and it is used only for test purposes  -->
+    <suppress>
+        <notes><![CDATA[
+   file name: commons-compress-1.20.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.commons/commons\-compress@.*$</packageUrl>
+        <cve>CVE-2021-35515</cve>
+        <cve>CVE-2021-35516</cve>
+        <cve>CVE-2021-35517</cve>
+        <cve>CVE-2021-36090</cve>
+    </suppress>
+
+    <!-- [wildfly] This is a false positive. Issue does not concern smallrye-mutiny-vertx-*  -->
+    <suppress>
+        <notes><![CDATA[
+   file name: smallrye-mutiny-vertx-core-2.11.0.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/io\.smallrye\.reactive/smallrye\-mutiny\-vertx\-.*@.*$</packageUrl>
+        <cve>CVE-2013-0136</cve>
+        <cve>CVE-2018-15529</cve>
+    </suppress>
+
+    <!-- [wildfly] WildFly 25.0.0 ships with velocity-engine-core 2.3, velocity-engine-scripting-2.1 comes with mockserver-core and its used in tests  -->
+    <suppress>
+        <notes><![CDATA[
+   file name: velocity-engine-scripting-2.1.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.velocity/velocity\-engine\-scripting@.*$</packageUrl>
+        <cve>CVE-2020-13936</cve>
+    </suppress>
+
     <!-- This is a false positive because wildfly-core itself does not use mockserver libraries. Mockserver is used only for test purposes (wildfly-core-testsuite-shared module). -->
     <suppress>
         <notes><![CDATA[
