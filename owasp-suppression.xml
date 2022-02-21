@@ -308,7 +308,9 @@
    file name: transformer-5.2.2.Final.jar
    file name: transformer-5.2.2.Final.jar (shaded: org.wildfly.extras.batavia:transformer-api:1.0.9.Final)
    ]]></notes>
-        <packageUrl regex="true">^pkg:maven/org\.wildfly(\.extras\.batavia/transformer\-api|\.galleon\-plugins(/wildfly\-galleon\-plugins|/transformer))@.*$</packageUrl>
+        <packageUrl regex="true">
+            ^pkg:maven/org\.wildfly(\.extras\.batavia/transformer\-api|\.galleon\-plugins(/wildfly\-galleon\-plugins|/transformer))@.*$
+        </packageUrl>
         <cve>CVE-2018-14627</cve>
         <cve>CVE-2019-3805</cve>
         <cve>CVE-2020-10718</cve>
@@ -318,5 +320,12 @@
         <cve>CVE-2020-25689</cve>
         <cve>CVE-2021-3536</cve>
     </suppress>
-
+    <!-- ManagedSieve of Apache James not found in WildFly distribution -->
+    <suppress>
+        <notes><![CDATA[
+   file name: apache-mime4j-core-0.8.4.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.james/apache\-mime4j\-.*$</packageUrl>
+        <cve>CVE-2021-40525</cve>
+    </suppress>
 </suppressions>
