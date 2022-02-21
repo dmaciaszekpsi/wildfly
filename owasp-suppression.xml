@@ -518,5 +518,12 @@
         <packageUrl regex="true">^pkg:maven/com\.h2database/h2@.*$</packageUrl>
         <cve>CVE-2021-23463</cve>
     </suppress>
-
+    <!-- ManagedSieve of Apache James not found in WildFly distribution -->
+    <suppress>
+        <notes><![CDATA[
+   file name: apache-mime4j-0.6.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.james/apache\-mime4j@.*$</packageUrl>
+        <cve>CVE-2021-40525</cve>
+    </suppress>
 </suppressions>
