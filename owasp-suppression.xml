@@ -340,4 +340,12 @@
         <packageUrl regex="true">^pkg:maven/org\.apache\.avro/avro@.*$</packageUrl>
         <cve>CVE-2021-43045</cve>
     </suppress>
+    <!-- [wildfly] WildFly 25 ships with Apache Santuario 2.2.3 which is not affected by CVE-2021-40690 -->
+    <suppress>
+        <notes><![CDATA[
+   file name: cxf-core-3.4.4.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.cxf.*$</packageUrl>
+        <cve>CVE-2021-40690</cve>
+    </suppress>
 </suppressions>
