@@ -536,4 +536,19 @@
         <packageUrl regex="true">^pkg:maven/org\.apache\.avro/avro@.*$</packageUrl>
         <cve>CVE-2021-43045</cve>
     </suppress>
+    <!-- Wildfly15 ships with JGroups 4.0.15.Final which is not affected by CVE-2016-2141  -->
+    <suppress>
+        <notes><![CDATA[
+   file name: jgroups-azure-1.2.0.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.jgroups\.azure/jgroups\-azure@.*$</packageUrl>
+        <cve>CVE-2016-2141</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+   file name: jgroups-kubernetes-1.0.6.Final.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.jgroups\.kubernetes/jgroups\-kubernetes@.*$</packageUrl>
+        <cve>CVE-2016-2141</cve>
+    </suppress>
 </suppressions>
