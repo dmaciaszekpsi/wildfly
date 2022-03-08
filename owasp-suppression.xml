@@ -551,4 +551,16 @@
         <packageUrl regex="true">^pkg:maven/org\.jgroups\.kubernetes/jgroups\-kubernetes@.*$</packageUrl>
         <cve>CVE-2016-2141</cve>
     </suppress>
+    <!-- [wildfly] (CVE-2019-10158, CVE-2019-10174) Red Hat JBoss Enterprise Application Platform 6 and 7 are Not affected -->
+    <!-- [wildfly] (CVE-2016-0750, CVE-2017-15089) WildFly 15 ships with Infinispan 9.4.11.Final which does not have this vulnerabilities  -->
+    <suppress>
+        <notes><![CDATA[
+   file name: picketbox-infinispan-5.0.3.Final-redhat-00006.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.picketbox/picketbox\-infinispan@.*$</packageUrl>
+        <cve>CVE-2019-10158</cve>
+        <cve>CVE-2019-10174</cve>
+        <cve>CVE-2016-0750</cve>
+        <cve>CVE-2017-15089</cve>
+    </suppress>
 </suppressions>
