@@ -535,6 +535,15 @@
         <vulnerabilityName>CWE-94: Improper Control of Generation of Code ('Code Injection')</vulnerabilityName>
     </suppress>
 
+    <!-- [wildfly] 'In practice, this issue impacts only H2 databases which are actively using the Web Console and enabled remote access.' WildFly uses on in-memory h2 without remote access. -->
+    <suppress>
+        <notes><![CDATA[
+   file name: h2-1.4.193.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/com\.h2database/h2@.*$</packageUrl>
+        <cve>CVE-2021-42392</cve>
+    </suppress>
+
     <!-- ManagedSieve of Apache James not found in WildFly distribution -->
     <!-- Jazzer of Apache James not found in WildFly distribution  -->
     <suppress>
