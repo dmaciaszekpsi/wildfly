@@ -10,7 +10,8 @@
         <cve>CVE-2021-26296</cve>
     </suppress>
 
-    <!-- [wildfly] WildFly 15.0.1-10-PSI ships with jackson-databind 2.10.5.1 -->
+    <!-- [wildfly] WildFly 15.0.1-10-PSI ships with jackson-databind 2.12.6.1 -->
+    <!-- [CVE-2020-36518] This vulnerability affects com.fasterxml.jackson.core:jackson-databind not org.codehaus.jackson:jackson-xc artifact. Issue has been fixed in 2.13.2.1 and 2.12.6.1 versions. (https://github.com/advisories/GHSA-57j2-w4cx-62h2) -->
     <suppress>
         <notes><![CDATA[
    file name: jackson-xc-1.9.14.jdk17-redhat-00001.jar
@@ -19,6 +20,7 @@
         <packageUrl regex="true">^pkg:maven/org\.codehaus\.jackson/jackson\-.*@.*$</packageUrl>
         <cve>CVE-2018-14718</cve>
         <cve>CVE-2018-7489</cve>
+        <cve>CVE-2020-36518</cve>
     </suppress>
 
     <!-- [wildfly] CVE-2020-10718 Fixed by applying https://github.com/wildfly/wildfly-core/pull/4293 (see https://issues.redhat.com/browse/WFCORE-4956?jql=text%20~%20%22CVE-2020-10718%22) -->
