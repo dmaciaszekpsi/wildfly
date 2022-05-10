@@ -148,7 +148,7 @@ public class AddressSettingDefinition extends PersistentResourceDefinition {
             .setAllowExpression(true)
             .build();
 
-    public static final SimpleAttributeDefinition PAGE_SIZE_BYTES = create("page-size-bytes", ModelType.LONG)
+    public static final SimpleAttributeDefinition PAGE_SIZE_BYTES = create("page-size-bytes", ModelType.INT)
             .setDefaultValue(new ModelNode(AddressSettings.DEFAULT_PAGE_SIZE))
             .setMeasurementUnit(BYTES)
             .setRequired(false)
