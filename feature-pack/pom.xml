@@ -1471,6 +1471,11 @@
         </dependency>
 
         <dependency>
+            <groupId>org.jctools</groupId>
+            <artifactId>jctools-core</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.jgroups</groupId>
             <artifactId>jgroups</artifactId>
         </dependency>
@@ -1845,7 +1850,13 @@
 
         <dependency>
             <groupId>org.apache.activemq</groupId>
-            <artifactId>artemis-native</artifactId>
+            <artifactId>activemq-artemis-native</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -1895,17 +1906,6 @@
         <dependency>
             <groupId>org.apache.activemq</groupId>
             <artifactId>artemis-stomp-protocol</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>artemis-tools</artifactId>
             <exclusions>
                 <exclusion>
                     <groupId>*</groupId>
