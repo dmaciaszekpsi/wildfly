@@ -6708,7 +6708,7 @@
                 <scope>test</scope>
             </dependency>
 
-           <dependency>
+            <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>wildfly-ormtransformer</artifactId>
                 <version>${project.version}</version>
