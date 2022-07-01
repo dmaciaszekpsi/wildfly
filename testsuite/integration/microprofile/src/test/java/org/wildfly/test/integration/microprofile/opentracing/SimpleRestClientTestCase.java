@@ -4,7 +4,7 @@ import static org.jboss.as.test.shared.integration.ejb.security.PermissionUtils.
 
 import io.opentracing.Scope;
 import io.opentracing.Tracer;
-import io.opentracing.contrib.tracerresolver.TracerFactory;
+import io.smallrye.opentracing.contrib.resolver.TracerFactory;
 import io.opentracing.mock.MockSpan;
 import io.opentracing.mock.MockTracer;
 import org.eclipse.microprofile.opentracing.ClientTracingRegistrar;
@@ -23,11 +23,12 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import javax.inject.Inject;
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Response;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.Response;
+
 import java.io.FilePermission;
 import java.net.SocketPermission;
 import java.net.URL;

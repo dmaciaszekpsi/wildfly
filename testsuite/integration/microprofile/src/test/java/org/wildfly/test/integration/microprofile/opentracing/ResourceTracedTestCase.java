@@ -3,7 +3,7 @@ package org.wildfly.test.integration.microprofile.opentracing;
 import static org.jboss.as.test.shared.integration.ejb.security.PermissionUtils.createPermissionsXmlAsset;
 
 import io.opentracing.Tracer;
-import io.opentracing.contrib.tracerresolver.TracerFactory;
+import io.smallrye.opentracing.contrib.resolver.TracerFactory;
 import io.opentracing.mock.MockTracer;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -21,8 +21,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import javax.inject.Inject;
-import javax.servlet.ServletContext;
+import jakarta.inject.Inject;
+import jakarta.servlet.ServletContext;
+
 import java.net.SocketPermission;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;

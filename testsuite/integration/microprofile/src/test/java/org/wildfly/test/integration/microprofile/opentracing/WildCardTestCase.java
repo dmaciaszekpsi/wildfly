@@ -20,9 +20,11 @@ import static org.jboss.as.test.shared.integration.ejb.security.PermissionUtils.
 import java.net.SocketPermission;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
-import javax.inject.Inject;
+
+import jakarta.inject.Inject;
+
 import io.opentracing.Tracer;
-import io.opentracing.contrib.tracerresolver.TracerFactory;
+import io.smallrye.opentracing.contrib.resolver.TracerFactory;
 import io.opentracing.mock.MockTracer;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
