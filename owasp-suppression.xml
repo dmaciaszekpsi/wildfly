@@ -710,17 +710,33 @@
        <cve>CVE-2021-3629</cve>
     </suppress>
     <suppress>
-       <notes><![CDATA[
+        <notes><![CDATA[
        file name: wildfly-server-7.0.0-14-PSI-SNAPSHOT.jar
        ]]></notes>
-       <packageUrl regex="true">^pkg:maven/org\.wildfly\.core/wildfly\-.*$</packageUrl>
-       <cve>CVE-2021-3629</cve>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.core/wildfly\-.*$</packageUrl>
+        <cve>CVE-2021-3629</cve>
     </suppress>
     <suppress>
-       <notes><![CDATA[
+        <notes><![CDATA[
        file name: wildfly-plugin-core-1.2.0.Final.jar
        ]]></notes>
-       <packageUrl regex="true">^pkg:maven/org\.wildfly\.plugins/wildfly\-plugin\-core@.*$</packageUrl>
-       <cve>CVE-2021-3629</cve>
-    </suppress>		
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.plugins/wildfly\-plugin\-core@.*$</packageUrl>
+        <cve>CVE-2021-3629</cve>
+    </suppress>
+
+    <!-- Vulnerability fixed in commit https://github.com/PSI-Polska/wildfly-core/commit/588e795dcc037c0b72911690ceb230250003706c -->
+    <suppress>
+        <notes><![CDATA[
+        file name: wildfly-core-7.0.0-14-PSI-SNAPSHOT.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.core/wildfly\-.*$</packageUrl>
+        <cve>CVE-2021-3717</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+        file name: wildfly-plugin-core-1.2.0.Final.jar
+        ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.wildfly\.plugins/wildfly\-plugin\-core@.*$</packageUrl>
+        <cve>CVE-2021-3717</cve>
+    </suppress>
 </suppressions>
