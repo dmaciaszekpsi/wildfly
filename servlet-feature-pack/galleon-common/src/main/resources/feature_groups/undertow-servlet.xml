@@ -16,7 +16,6 @@
             <feature spec="subsystem.undertow.servlet-container.setting.session-cookie">
                 <param name="secure" value="true"/>
                 <param name="http-only" value="true"/>
-<!--                <param name="comment"  value="\; SameSite=None"/>-->
             </feature>
             <feature spec="subsystem.undertow.servlet-container.setting.websockets">
                 <unset param="buffer-pool" />
