@@ -300,7 +300,7 @@
                 <version.org.jboss.resteasy.ee9>6.0.0.Final</version.org.jboss.resteasy.ee9>
                 <!-- This is required for the RESTEasy 6.0.0 upgrade. As of RESTEasy 5 there is no more MP related implementations -->
                 <version.org.jboss.resteasy.microprofile>1.0.0.Final</version.org.jboss.resteasy.microprofile>
-                <version.org.jboss.spec.jakarta.ws.rs.jboss-jaxrs-api_3.0_spec>1.0.1.Final</version.org.jboss.spec.jakarta.ws.rs.jboss-jaxrs-api_3.0_spec>
+<!--                <version.org.jboss.spec.jakarta.ws.rs.jboss-jaxrs-api_3.0_spec>1.0.1.Final</version.org.jboss.spec.jakarta.ws.rs.jboss-jaxrs-api_3.0_spec>-->
                 <!-- Test only dependencies - don't update in ee-9/pom.xml -->
                 <version.org.eclipse.microprofile.fault-tolerance.tck>${version.org.eclipse.microprofile.fault-tolerance.api}</version.org.eclipse.microprofile.fault-tolerance.tck>
                 <!-- Test framework only dependencies - don't update in ee-9/pom.xml -->
@@ -499,10 +499,21 @@
                             </exclusion>
                         </exclusions>
                     </dependency>
+<!--                    <dependency>-->
+<!--                        <groupId>org.jboss.spec.javax.ws.rs</groupId>-->
+<!--                        <artifactId>jboss-jaxrs-api_3.0_spec</artifactId>-->
+<!--                        <version>${version.org.jboss.spec.jakarta.ws.rs.jboss-jaxrs-api_3.0_spec}</version>-->
+<!--                    </dependency>-->
                     <dependency>
-                        <groupId>org.jboss.spec.javax.ws.rs</groupId>
-                        <artifactId>jboss-jaxrs-api_3.0_spec</artifactId>
-                        <version>${version.org.jboss.spec.jakarta.ws.rs.jboss-jaxrs-api_3.0_spec}</version>
+                        <groupId>jakarta.ws.rs</groupId>
+                        <artifactId>jakarta.ws.rs-api</artifactId>
+                        <version>${version.jakarta.ws.rs.jakarta-ws-rs-api}</version>
+                        <exclusions>
+                            <exclusion>
+                                <groupId>*</groupId>
+                                <artifactId>*</artifactId>
+                            </exclusion>
+                        </exclusions>
                     </dependency>
                     <dependency>
                         <groupId>jakarta.json.bind</groupId>

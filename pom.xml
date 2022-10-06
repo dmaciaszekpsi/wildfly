@@ -283,8 +283,8 @@
         <version.antlr>2.7.7</version.antlr>
         <version.com.beust>1.78</version.com.beust>
         <version.com.fasterxml.classmate>1.5.1</version.com.fasterxml.classmate>
-        <version.com.fasterxml.jackson>2.12.7</version.com.fasterxml.jackson>
-        <version.com.fasterxml.jackson.databind>2.12.7</version.com.fasterxml.jackson.databind>
+        <version.com.fasterxml.jackson>2.13.4</version.com.fasterxml.jackson>
+        <version.com.fasterxml.jackson.databind>${version.com.fasterxml.jackson}</version.com.fasterxml.jackson.databind>
         <version.com.github.ben-manes.caffeine>2.9.3</version.com.github.ben-manes.caffeine>
         <version.com.github.fge.btf>1.2</version.com.github.fge.btf>
         <version.com.github.fge.jackson-coreutils>1.8</version.com.github.fge.jackson-coreutils>
@@ -1665,19 +1665,19 @@
                 <version>${version.com.fasterxml.jackson}</version>
             </dependency>
             <dependency>
-                <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                <artifactId>jackson-jaxrs-base</artifactId>
+                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+                <artifactId>jackson-jakarta-rs-base</artifactId>
                 <version>${version.com.fasterxml.jackson}</version>
             </dependency>
             <dependency>
-                <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                <artifactId>jackson-jaxrs-json-provider</artifactId>
+                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+                <artifactId>jackson-jakarta-rs-json-provider</artifactId>
                 <version>${version.com.fasterxml.jackson}</version>
             </dependency>
             <!-- also need JAXB annotation support -->
             <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
-                <artifactId>jackson-module-jaxb-annotations</artifactId>
+                <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
                 <version>${version.com.fasterxml.jackson}</version>
                 <exclusions>
                     <exclusion>

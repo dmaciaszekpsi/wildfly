@@ -833,9 +833,15 @@
             <scope>provided</scope>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>org.jboss.spec.javax.ws.rs</groupId>-->
+<!--            <artifactId>jboss-jaxrs-api_3.0_spec</artifactId>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+
         <dependency>
-            <groupId>org.jboss.spec.javax.ws.rs</groupId>
-            <artifactId>jboss-jaxrs-api_3.0_spec</artifactId>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -860,23 +866,20 @@
         <!-- EE 9 Impls -->
 
         <dependency>
-            <groupId>com.fasterxml.jackson.jaxrs</groupId>
-            <artifactId>jackson-jaxrs-base</artifactId>
-            <classifier>jakarta</classifier>
+            <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+            <artifactId>jackson-jakarta-rs-base</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>com.fasterxml.jackson.jaxrs</groupId>
-            <artifactId>jackson-jaxrs-json-provider</artifactId>
-            <classifier>jakarta</classifier>
+            <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+            <artifactId>jackson-jakarta-rs-json-provider</artifactId>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-jaxb-annotations</artifactId>
-            <classifier>jakarta</classifier>
+            <artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId>
             <scope>provided</scope>
         </dependency>
 

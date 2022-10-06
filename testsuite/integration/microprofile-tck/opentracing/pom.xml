@@ -251,9 +251,13 @@
                     <groupId>jakarta.inject</groupId>
                     <artifactId>jakarta.inject-api</artifactId>
                 </dependency>
+<!--                <dependency>-->
+<!--                    <groupId>org.jboss.spec.javax.ws.rs</groupId>-->
+<!--                    <artifactId>jboss-jaxrs-api_3.0_spec</artifactId>-->
+<!--                </dependency>-->
                 <dependency>
-                    <groupId>org.jboss.spec.javax.ws.rs</groupId>
-                    <artifactId>jboss-jaxrs-api_3.0_spec</artifactId>
+                    <groupId>jakarta.ws.rs</groupId>
+                    <artifactId>jakarta.ws.rs-api</artifactId>
                 </dependency>
                 <dependency>
                     <groupId>org.jboss.resteasy</groupId>
