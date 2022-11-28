@@ -5634,10 +5634,11 @@
             </dependency>
 
             <dependency>
-                <groupId>org.codehaus.jackson</groupId>
-                <artifactId>jackson-xc</artifactId>
-                <version>${version.org.codehaus.jackson}</version>
+                <groupId>com.fasterxml.jackson.module</groupId>
+                <artifactId>jackson-module-jaxb-annotations</artifactId>
+                <version>${version.com.fasterxml.jackson}</version>
             </dependency>
+
 
             <dependency>
                 <groupId>org.codehaus.jettison</groupId>
