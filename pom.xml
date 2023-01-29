@@ -7635,6 +7635,10 @@
                 <classifier>resources</classifier>
                 <exclusions>
                     <exclusion>
+                        <groupId>javax.validation</groupId>
+                        <artifactId>validation-api</artifactId>
+                    </exclusion>
+                    <exclusion>
                         <groupId>org.jboss.hal</groupId>
                         <artifactId>hal-ballroom</artifactId>
                     </exclusion>
