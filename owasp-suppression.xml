@@ -11,7 +11,7 @@
         <cve>CVE-2017-15089</cve>
         <cve>CVE-2019-10174</cve>
     </suppress>
-    
+
     <!-- [wildfly] Apache ActiveMQ is not shipped with wildfly ('ActiveMQ Artemis' is not 'ActiveMQ') -->
     <suppress>
         <notes><![CDATA[
@@ -93,7 +93,7 @@
         <packageUrl regex="true">^pkg:maven/org\.wildfly.*@.*$</packageUrl>
         <cve>CVE-2020-25640</cve>
     </suppress>
-	
+
     <!-- [wildfly] Used only in tests, not deployed  -->
     <suppress>
         <notes><![CDATA[
@@ -170,7 +170,7 @@
         <cve>CVE-2020-10719</cve>
         <cve>CVE-2020-1745</cve>
     </suppress>
-    
+
     <!-- [wildfly] This is a false positive because wildfly itself does not use commons-compress. Commons-compress comes with org.testcontainers and it is used only for test purposes  -->
     <suppress>
         <notes><![CDATA[
@@ -201,25 +201,25 @@
         <packageUrl regex="true">^pkg:maven/org\.apache\.velocity/velocity\-engine\-scripting@.*$</packageUrl>
         <cve>CVE-2020-13936</cve>
     </suppress>
-	
-	<!-- CVE-2019-0231 False positive - Apacheds-all is only used in tests -->
-	<suppress>
-		<notes><![CDATA[
+
+    <!-- CVE-2019-0231 False positive - Apacheds-all is only used in tests -->
+    <suppress>
+        <notes><![CDATA[
 		file name: apacheds-all-2.0.0-M24.jar (shaded: org.apache.mina:mina-core:2.0.16)
 		]]></notes>
-		<packageUrl regex="true">^pkg:maven/org\.apache\.mina/mina\-core@.*$</packageUrl>
-		<cve>CVE-2019-0231</cve>
-	</suppress>
-	
-	<!-- CVE-2017-12629 False positive - JBoss EAP7 is not affected by this flaw -->
-	<suppress>
-		<notes><![CDATA[
+        <packageUrl regex="true">^pkg:maven/org\.apache\.mina/mina\-core@.*$</packageUrl>
+        <cve>CVE-2019-0231</cve>
+    </suppress>
+
+    <!-- CVE-2017-12629 False positive - JBoss EAP7 is not affected by this flaw -->
+    <suppress>
+        <notes><![CDATA[
 		file name: lucene-queryparser-5.5.5.jar
 		]]></notes>
-		<packageUrl regex="true">^pkg:maven/org\.apache\.lucene/lucene\-queryparser@.*$</packageUrl>
-		<cve>CVE-2017-12629</cve>
-	</suppress>
-	
+        <packageUrl regex="true">^pkg:maven/org\.apache\.lucene/lucene\-queryparser@.*$</packageUrl>
+        <cve>CVE-2017-12629</cve>
+    </suppress>
+
     <!-- This is a false positive because wildfly-core itself does not use mockserver libraries. Mockserver is used only for test purposes (wildfly-core-testsuite-shared module). -->
     <suppress>
         <notes><![CDATA[
@@ -295,7 +295,7 @@
         <packageUrl regex="true">^pkg:maven/com\.h2database/h2@.*$</packageUrl>
         <cve>CVE-2021-42392</cve>
     </suppress>
-    
+
     <!-- [wildfly] False-positive: it was fixed in 2.7.1.jbossorg-4 (https://github.com/jboss/xalan-j/commit/8cd0c151456475f57961b0987d9f985202f81eec) -->
     <suppress>
         <notes><![CDATA[
@@ -582,33 +582,33 @@
         <packageUrl regex="true">^pkg:javascript/bootstrap@.*$</packageUrl>
         <cve>CVE-2022-24785</cve>
     </suppress>
-    
+
     <!-- False-positive, vulnerability detected in Async javascript library https://github.com/caolan/async but Wildfly uses a different lib: https://github.com/IBM/java-async-util -->
     <suppress>
-       <notes><![CDATA[
+        <notes><![CDATA[
        file name: asyncutil-0.1.0.jar
        ]]></notes>
-       <packageUrl regex="true">^pkg:maven/com\.ibm\.async/asyncutil@.*$</packageUrl>
-       <cve>CVE-2021-43138</cve>
-    </suppress>    
-    
+        <packageUrl regex="true">^pkg:maven/com\.ibm\.async/asyncutil@.*$</packageUrl>
+        <cve>CVE-2021-43138</cve>
+    </suppress>
+
     <!-- Wildfly uses jboss.resteasy 4.x which is higher than vulnerable ones (before 3.1.2). Mocroprofile comes with appropriate exclusions. -->
     <suppress>
-       <notes><![CDATA[
+        <notes><![CDATA[
        file name: microprofile-config-1.0.0.Final.jar
        ]]></notes>
-       <packageUrl regex="true">^pkg:maven/org\.jboss\.resteasy\.microprofile/microprofile\-.*@.*$</packageUrl>
-       <cve>CVE-2016-9606</cve>
-    </suppress>    
+        <packageUrl regex="true">^pkg:maven/org\.jboss\.resteasy\.microprofile/microprofile\-.*@.*$</packageUrl>
+        <cve>CVE-2016-9606</cve>
+    </suppress>
 
     <!-- According to RedHat this is fixed in the current version https://issues.redhat.com/browse/WFLY-16229, see also: https://github.com/advisories/GHSA-57j2-w4cx-62h2, https://bugzilla.redhat.com/show_bug.cgi?id=2064698 -->
     <!-- I've double checked with dependency tree and there is only com.fasterxml.jackson.core:jackson-databind:jar:2.12.6.1 used -->
     <suppress>
-       <notes><![CDATA[
+        <notes><![CDATA[
        file name: wildfly-elytron-1.19.0.Final.jar (shaded: com.fasterxml.jackson.core:jackson-databind:2.11.4)
        ]]></notes>
-       <packageUrl regex="true">^pkg:maven/com\.fasterxml\.jackson\.core/jackson\-databind@.*$</packageUrl>
-       <cve>CVE-2020-36518</cve>
+        <packageUrl regex="true">^pkg:maven/com\.fasterxml\.jackson\.core/jackson\-databind@.*$</packageUrl>
+        <cve>CVE-2020-36518</cve>
     </suppress>
 
     <!-- The io.undertow system is vulnerable, but not org.wildfly.security.elytron-web:undertow-server which integrates Elytron with Undertow -->
@@ -619,7 +619,7 @@
    ]]></notes>
         <packageUrl regex="true">^pkg:maven/org\.wildfly\.security\.elytron\-web/undertow\-server.*$</packageUrl>
         <cve>CVE-2021-3629</cve>
-		<cve>CVE-2021-3690</cve>
+        <cve>CVE-2021-3690</cve>
         <cve>CVE-2021-3597</cve>
         <cve>CVE-2020-10687</cve>
         <cve>CVE-2021-20220</cve>
@@ -641,24 +641,24 @@
         <packageUrl regex="true">^pkg:maven/org\.wildfly\.plugins/wildfly\-plugin\-core@.*$</packageUrl>
         <cve>CVE-2021-3717</cve>
     </suppress>
-    
-    <!-- According to author of okhttp this vulnerability can only be exploited when the vulnerable method is called directly, which it isn't in WF. See https://github.com/square/okhttp/issues/6724#issuecomment-866701186  -->   
-	<suppress>
+
+    <!-- According to author of okhttp this vulnerability can only be exploited when the vulnerable method is called directly, which it isn't in WF. See https://github.com/square/okhttp/issues/6724#issuecomment-866701186  -->
+    <suppress>
         <notes><![CDATA[
         file name: okhttp-3.14.9.jar
         ]]></notes>
         <packageUrl regex="true">^pkg:maven/com\.squareup\.okhttp3/okhttp@.*$</packageUrl>
         <vulnerabilityName>CVE-2021-0341</vulnerabilityName>
     </suppress>
-	
+
     <!-- This issue touches artifact provisioned in Amazon Linux (https://alas.aws.amazon.com/ALAS-2022-1601.html). Also log4j-cve-2021-44228-hotpatch-1.3.5 is not present in PSI WildFly. -->
     <suppress>
-       <notes><![CDATA[
+        <notes><![CDATA[
        file name: log4j-api-2.17.2.jar
        ]]></notes>
-       <packageUrl regex="true">^pkg:maven/org\.apache\.logging\.log4j/log4j\-api@.*$</packageUrl>
-       <cpe>cpe:/a:apache:log4j</cpe>
-	   <vulnerabilityName>CVE-2022-33915</vulnerabilityName>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.logging\.log4j/log4j\-api@.*$</packageUrl>
+        <cpe>cpe:/a:apache:log4j</cpe>
+        <vulnerabilityName>CVE-2022-33915</vulnerabilityName>
     </suppress>
 
     <!-- This is false positive because the affected code is in Payara server and fix is in the catalina web-subystem.
@@ -700,8 +700,8 @@
         <packageUrl regex="true">^pkg:maven/org\.eclipse\.microprofile\.jwt/microprofile\-jwt\-auth\-api@.*$</packageUrl>
         <cve>CVE-2022-37422</cve>
     </suppress>
-	
-	<!-- Vulnerability fixed in undertow 2.2.18 -->
+
+    <!-- Vulnerability fixed in undertow 2.2.18 -->
     <suppress>
         <notes><![CDATA[
    file name: undertow-core-2.2.19.Final.jar
@@ -730,8 +730,8 @@
         <packageUrl regex="true">^pkg:maven/io\.undertow/undertow\-servlet@.*$</packageUrl>
         <cve>CVE-2022-1319</cve>
     </suppress>
-	
-	<!--  Vulnerability fixed in Undertow 2.2.15 -->
+
+    <!--  Vulnerability fixed in Undertow 2.2.15 -->
     <suppress>
         <notes><![CDATA[
    file name: undertow-server-1.10.1.Final.jar
@@ -746,8 +746,8 @@
         <packageUrl regex="true">^pkg:maven/org\.wildfly\.security\.elytron\-web/undertow\-server\-servlet@.*$</packageUrl>
         <cve>CVE-2021-3859</cve>
     </suppress>
-	
-	<!-- CVE-2022-1259 is directly related to undertow-core -->
+
+    <!-- CVE-2022-1259 is directly related to undertow-core -->
     <suppress>
         <notes><![CDATA[
    file name: undertow-server-1.10.1.Final.jar
@@ -889,14 +889,14 @@
         <packageUrl regex="true">^pkg:maven/org\.apache\.commons/commons\-text@.*$</packageUrl>
         <vulnerabilityName>CVE-2022-42889</vulnerabilityName>
     </suppress>
-	<!-- False positive, H2 web console is used in development process. Not shared in production -->
-	<suppress>
-   		<notes><![CDATA[
+    <!-- False positive, H2 web console is used in development process. Not shared in production -->
+    <suppress>
+        <notes><![CDATA[
    		file name: h2-1.4.197.jar
    		]]></notes>
-   		<packageUrl regex="true">^pkg:maven/com\.h2database/h2@.*$</packageUrl>
-   		<cve>CVE-2022-45868</cve>
-	</suppress>
+        <packageUrl regex="true">^pkg:maven/com\.h2database/h2@.*$</packageUrl>
+        <cve>CVE-2022-45868</cve>
+    </suppress>
     <!-- [PJFCB-3041] False positive as we don't use Payara -->
     <suppress>
         <notes><![CDATA[
@@ -913,21 +913,21 @@
         <packageUrl regex="true">^pkg:maven/org\.eclipse\.microprofile\.jwt/microprofile\-jwt\-auth\-api@.*$</packageUrl>
         <cve>CVE-2022-45129</cve>
     </suppress>
-	<!-- Vulnerable class is not used in wildfly-core (Wildfly inherits "vulnerable" modules from wildfly-core) -->
-	<suppress>
-		<notes><![CDATA[
+    <!-- Vulnerable class is not used in wildfly-core (Wildfly inherits "vulnerable" modules from wildfly-core) -->
+    <suppress>
+        <notes><![CDATA[
 		file name: sshd-core-2.7.0.jar
 		]]></notes>
-		<packageUrl regex="true">^pkg:maven/org\.apache\.sshd/sshd\-core@.*$</packageUrl>
-		<cve>CVE-2022-45047</cve>
-	</suppress>
-	<suppress>
-		<notes><![CDATA[
+        <packageUrl regex="true">^pkg:maven/org\.apache\.sshd/sshd\-core@.*$</packageUrl>
+        <cve>CVE-2022-45047</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
 		file name: sshd-common-2.7.0.jar
 		]]></notes>
-		<packageUrl regex="true">^pkg:maven/org\.apache\.sshd/sshd\-common@.*$</packageUrl>
-		<cve>CVE-2022-45047</cve>
-	</suppress>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.sshd/sshd\-common@.*$</packageUrl>
+        <cve>CVE-2022-45047</cve>
+    </suppress>
     <!--    Based on https://github.com/wildfly-security/wildfly-elytron/pull/1847#issuecomment-1340075025 wildfly-elytron will be suppressed CVE-2022-42004-->
     <!--    Based on https://github.com/wildfly-security/wildfly-elytron/pull/1847#issuecomment-1341254539 wildfly-elytron will be suppressed  CVE-2022-42003 -->
     <suppress>
@@ -938,7 +938,7 @@
         <cve>CVE-2022-42003</cve>
         <cve>CVE-2022-42004</cve>
     </suppress>
-	<!-- Wildfly uses json-patch from java-json-tools/json-patch. CVE is about Starcounter-Jack/JSON-Patch -->
+    <!-- Wildfly uses json-patch from java-json-tools/json-patch. CVE is about Starcounter-Jack/JSON-Patch -->
     <suppress>
         <notes><![CDATA[
     file name: json-patch-1.9.jar
@@ -951,8 +951,8 @@
    file name: snakeyaml-1.33.jar
    ]]></notes>
         <packageUrl regex="true">^pkg:maven/org\.yaml/snakeyaml@.*$</packageUrl>
-	<!-- Based on https://nvd.nist.gov/vuln/detail/CVE-2022-3064 - CVE affects yaml support in GO language which is not part of WildFly -->
-	<cve>CVE-2022-3064</cve>
+        <!-- Based on https://nvd.nist.gov/vuln/detail/CVE-2022-3064 - CVE affects yaml support in GO language which is not part of WildFly -->
+        <cve>CVE-2022-3064</cve>
     </suppress>
     <!-- [PJFCB-3564] False positive as we don't use Apacke Kafka and kafka-clients appears not to be affected-->
     <suppress>
@@ -961,5 +961,21 @@
    ]]></notes>
         <packageUrl regex="true">^pkg:maven/org\.apache\.kafka/kafka\-clients@.*$</packageUrl>
         <vulnerabilityName>CVE-2023-25194</vulnerabilityName>
+    </suppress>
+    <!-- [PJFCB-3778] False positive as we don't use Apache SOAP -->
+    <suppress>
+        <notes><![CDATA[
+   file name: cxf-rt-bindings-soap-3.4.10.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.cxf/cxf\-rt\-bindings\-soap@.*$</packageUrl>
+        <cve>CVE-2022-40705</cve>
+    </suppress>
+    <!-- json-smart is used only in org.wildfly:wildfly-testsuite-shared -->
+    <suppress>
+        <notes><![CDATA[
+   file name: json-smart-2.3.jar
+   ]]></notes>
+        <packageUrl regex="true">^pkg:maven/net\.minidev/json\-smart@.*$</packageUrl>
+        <vulnerabilityName>CVE-2023-1370</vulnerabilityName>
     </suppress>
 </suppressions>
